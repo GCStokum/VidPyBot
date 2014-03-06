@@ -59,23 +59,23 @@ while RUNNING:
                 #print(LB)
                 
 
-            if event.key == pygame.K_KP4:
-                LR = not LR
-                #print(LR)
-            if event.key == pygame.K_KP5:
-                LG = not LG
-                #print(LG)
-            if event.key == pygame.K_KP6:
-                LB = not LB
-                #print(LB)
-
             if event.key == pygame.K_KP7:
-                print('7')
+                ObjRun = True
+                ObjDir = True
+                #print(LR)
             if event.key == pygame.K_KP8:
-                LG = not LG
+                ObjRun = False
                 #print(LG)
             if event.key == pygame.K_KP9:
-                LB = not LB
+                ObjRun = True
+                ObjDir = False
+                #print(LB)
+
+            if event.key == pygame.K_KP4:
+                print('4')
+            if event.key == pygame.K_KP5:
+                #print(LG)
+            if event.key == pygame.K_KP6:
                 #print(LB)
 
 
@@ -83,15 +83,10 @@ while RUNNING:
     GPIO.output(LEDG, LG)
     GPIO.output(LEDB, LB)
 
-        # SLIDE CONTROLS
-        # if 4 toggle left dir and start
-        # if 6 toggle right dir and start
-        # if 5 Stop
+    if ObjRun is True:
 
-        # OBJECT CONTROLS
-        # if 7 turn CCW
-        # if 9 turn CW
-        # if 8 Stop
+    else:
+        # No Object Run
 
 '''
     ###############
